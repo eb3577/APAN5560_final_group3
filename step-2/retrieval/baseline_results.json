@@ -1,0 +1,256 @@
+{
+  "model": "BAAI/bge-small-en-v1.5",
+  "query_prefix": "Represent this sentence for searching relevant passages: ",
+  "results": [
+    {
+      "question": "What are common symptoms of asthma?",
+      "matches": [
+        {
+          "rank": 1,
+          "cosine_similarity": 0.856191,
+          "chunk_id": "2-003",
+          "topic_id": "2",
+          "title": "Asthma",
+          "url": "https://medlineplus.gov/asthma.html",
+          "text": "- Often having viral respiratory infections as a young child.\n- Sex. In children, asthma is more common in boys. In teens and adults, it is more common in women.\nWhat are the symptoms of asthma?\nThe symptoms of asthma include:\n- Chest tightness\n- Coughing, especially at night or early morning\n- Shortness of breath\n- Wheezing, which causes a whistling sound when you breathe out\nThese symptoms can range from mild to severe. You may have them every day or only once in a while.\nWhen you are having an asthma attack, your symptoms get much worse. The attacks may come on gradually or suddenly. Sometimes they can be life-threatening. They are more common in people who have severe asthma. If you are having asthma attacks, you may need a change in your treatment.\nHow is asthma diagnosed?\nYour health care provider may use many tools to diagnose asthma:\n- Physical exam.\n- Medical history.\n- Lung function tests, including spirometry, to test how well your lungs work."
+        },
+        {
+          "rank": 2,
+          "cosine_similarity": 0.798782,
+          "chunk_id": "1507-003",
+          "topic_id": "1507",
+          "title": "Asthma in Children",
+          "url": "https://medlineplus.gov/asthmainchildren.html",
+          "text": "- Race or ethnicity. Black and African Americans and Puerto Ricans are at higher risk of asthma than people of other races or ethnicities.\n- Having other diseases or conditions such as obesity and allergies\n- Often having viral respiratory infections as young children\n- Sex. In children, asthma is more common in boys. In teens, it is more common in girls.\nWhat are the symptoms of asthma in children?\nThe symptoms of asthma in children include:\n- Chest tightness\n- Coughing, especially at night or early morning\n- Breathing problems, such as shortness of breath, rapid breathing, or gasping for air\n- Feeling tired\n- Dark circles under the eyes\n- Being irritable\n- Wheezing, which causes a whistling sound when they breathe out\n- Trouble eating or sucking (in infants)\nThese symptoms can range from mild to severe. They may happen often or only once in a while."
+        },
+        {
+          "rank": 3,
+          "cosine_similarity": 0.765689,
+          "chunk_id": "1507-004",
+          "topic_id": "1507",
+          "title": "Asthma in Children",
+          "url": "https://medlineplus.gov/asthmainchildren.html",
+          "text": "When children have an asthma attack, their symptoms get much worse. The attacks may come on gradually or suddenly. Sometimes they can be life-threatening. Warning signs of a severe attack include severe coughing, serious breathing problems, and turning very pale or blue in the face, lips and/or fingernails. If your child has those symptoms, get medical help right away.\nHow is asthma in children diagnosed?\nIt can be hard to diagnose asthma in children, especially if they are young. Asthma has similar symptoms as other childhood conditions. And some children may not have asthma symptoms very often, so it may seem like they are having respiratory infections instead.\nYour child's health care provider may use many tools to diagnose asthma:\n- Physical exam\n- Medical history\n- Chest x-ray\n- Lung function tests, including spirometry, to test how well the lungs work. Younger children are usually not able to do these tests.\n- Allergy skin or blood tests, if you have a history of allergies. These tests check which allergens cause a reaction from your immune system."
+        },
+        {
+          "rank": 4,
+          "cosine_similarity": 0.763972,
+          "chunk_id": "2-001",
+          "topic_id": "2",
+          "title": "Asthma",
+          "url": "https://medlineplus.gov/asthma.html",
+          "text": "What is asthma?\nAsthma is a chronic (long-term) lung disease. It affects your airways, the tubes that carry air in and out of your lungs. When you have asthma, your airways can become inflamed and narrowed. This can cause wheezing, coughing, and tightness in your chest. When these symptoms get worse than usual, it is called an asthma attack or flare-up.\nWhat causes asthma?\nThe exact cause of asthma is unknown. Genetics and your environment likely play a role in who gets asthma.\nAn asthma attack can happen when you are exposed to an asthma trigger. An asthma trigger is something that can set off or worsen your asthma symptoms. Different triggers can cause different types of asthma:\n- Allergic asthma is caused by allergens. Allergens are substances that cause an allergic reaction. They can include:\n- Dust mites\n- Mold\n- Pets\n- Pollen from grass, trees, and weeds\n- Waste from pests such as cockroaches and mice\n- Nonallergic asthma is caused by triggers that are not allergens, such as:\n- Breathing in cold air\n- Certain medicines"
+        },
+        {
+          "rank": 5,
+          "cosine_similarity": 0.755086,
+          "chunk_id": "1507-001",
+          "topic_id": "1507",
+          "title": "Asthma in Children",
+          "url": "https://medlineplus.gov/asthmainchildren.html",
+          "text": "What is asthma?\nAsthma is a chronic (long-term) lung disease. It affects your airways, the tubes that carry air in and out of your lungs. When you have asthma, your airways can become inflamed and narrowed. This can cause wheezing, coughing, and tightness in your chest. When these symptoms get worse than usual, it is called an asthma attack or flare-up.\nHow does asthma affect children?\nAsthma often starts during childhood, usually before age 5. Many children have asthma - it is the most common chronic disease of childhood. It can cause children to miss school and end up in the hospital. But treatments can help manage asthma.\nWhat causes asthma in children?\nThe exact cause of asthma is unknown. Genetics and environment likely play a role in which children get asthma.\nAn asthma attack can happen when your child is exposed to an asthma trigger. An asthma trigger is something that can set off or worsen asthma symptoms. Different triggers can cause different types of asthma:"
+        }
+      ]
+    },
+    {
+      "question": "What is the difference between type 1 and type 2 diabetes?",
+      "matches": [
+        {
+          "rank": 1,
+          "cosine_similarity": 0.799211,
+          "chunk_id": "5930-001",
+          "topic_id": "5930",
+          "title": "Diabetes Type 2",
+          "url": "https://medlineplus.gov/diabetestype2.html",
+          "text": "What is type 2 diabetes?\nType 2 diabetes is a disease in which your blood glucose, or blood sugar, levels are too high. Glucose is your main source of energy. It comes from the foods you eat. A hormone called insulin helps the glucose get into your cells to give them energy. If you have diabetes, your body doesn't make enough insulin or doesn't use insulin well. The glucose then stays in your blood and not enough goes into your cells.\nOver time, having too much glucose in your blood can cause health problems. But you can take steps to manage your diabetes and try to prevent these health problems.\nWhat causes type 2 diabetes?\nType 2 diabetes may be caused by a combination of factors:\n- Being overweight or having obesity\n- Not being physically active\n- Genetics and family history"
+        },
+        {
+          "rank": 2,
+          "cosine_similarity": 0.792544,
+          "chunk_id": "5930-002",
+          "topic_id": "5930",
+          "title": "Diabetes Type 2",
+          "url": "https://medlineplus.gov/diabetestype2.html",
+          "text": "Type 2 diabetes usually starts with insulin resistance. This is a condition in which your cells don't respond normally to insulin. As a result, your body needs more insulin to help the glucose enter your cells. At first, your body makes more insulin to try to get cells to respond. But over time, your body can't make enough insulin, and your blood glucose levels rise.\nWho is at risk for type 2 diabetes?\nYou are at higher risk of developing type 2 diabetes if you:\n- Are over age 45. Children, teenagers, and younger adults can get type 2 diabetes, but it is more common in middle-aged and older people.\n- Have prediabetes, which means that your blood glucose is high for you but not high enough to be called diabetes\n- Had diabetes in pregnancy or gave birth to a baby weighing 9 pounds or more.\n- Have a family history of diabetes\n- Are overweight or have obesity\n- Are Black or African American, Hispanic/Latino, American Indian, Asian American, or Pacific Islander\n- Are not physically active"
+        },
+        {
+          "rank": 3,
+          "cosine_similarity": 0.78788,
+          "chunk_id": "4-002",
+          "topic_id": "4",
+          "title": "Diabetes",
+          "url": "https://medlineplus.gov/diabetes.html",
+          "text": "- Type 1 diabetes. If you have type 1 diabetes, your body makes little or no insulin. It happens when your immune system attacks and destroys the cells that produce insulin.\n- Type 2 diabetes. This is the most common form of diabetes. If you have type 2 diabetes, your body may still be able to make insulin, but your cells don't respond well to insulin. They can't easily take up enough glucose from your blood.\n- Gestational diabetes. This is a form of diabetes that develops during pregnancy. It happens when your body can't make the extra insulin it needs during pregnancy.\nWhat causes diabetes?\nThe different types of diabetes have different causes:\n- Researchers think type 1 diabetes is caused by genes and factors in the environment that might trigger the disease.\n- Type 2 diabetes is caused by several factors, including lifestyle factors and genes. The lifestyle factors include not being physically active and being overweight or having obesity."
+        },
+        {
+          "rank": 4,
+          "cosine_similarity": 0.784419,
+          "chunk_id": "6661-001",
+          "topic_id": "6661",
+          "title": "How to Prevent Diabetes",
+          "url": "https://medlineplus.gov/howtopreventdiabetes.html",
+          "text": "What is diabetes?\nDiabetes, also called diabetes mellitus, is a disease that causes your blood glucose, or blood sugar, levels to be too high. There are three types of diabetes: type 1 diabetes, gestational diabetes, and type 2 diabetes. Type 2 diabetes is the most common type and may be prevented, delayed, or managed by making lifestyle changes.\nWhat is type 2 diabetes?\nIf you have type 2 diabetes, your body doesn't make enough insulin or doesn't use it well. This is called insulin resistance. Insulin is a hormone that helps glucose get into your cells. Glucose is your cells' main source of energy and comes from the foods you eat. If your body is resistant to insulin, then insulin can't get enough glucose into your cells. This then leads to glucose staying in your blood, leading to high blood glucose levels.\nOver time, having too much glucose in your blood can cause health problems. If you are at risk for type 2 diabetes, you might be able to prevent or delay developing it."
+        },
+        {
+          "rank": 5,
+          "cosine_similarity": 0.771231,
+          "chunk_id": "1339-001",
+          "topic_id": "1339",
+          "title": "Diabetes Type 1",
+          "url": "https://medlineplus.gov/diabetestype1.html",
+          "text": "What is type 1 diabetes?\nDiabetes means your blood glucose, also called blood sugar, is too high. With type 1 diabetes, your body makes little or no insulin. Insulin is a hormone from your pancreas that helps glucose move from your body into your cells, where it is used for energy. Your body can make glucose, but it also comes from the food you eat. Without insulin, too much glucose stays in your blood.\nOver time, high blood glucose can lead to serious problems with your heart, eyes, kidneys, nerves, gums, and teeth.\nIf your blood glucose gets very high, you can develop diabetic ketoacidosis (DKA). It happens when your body doesn't have enough insulin to allow glucose into your cells. Instead, your liver breaks down fat for energy, which produces ketones. When ketones build up too quickly, they can reach dangerous levels. DKA is a life-threatening emergency.\nWhat causes type 1 diabetes?"
+        }
+      ]
+    },
+    {
+      "question": "How can I reduce my risk of high blood pressure?",
+      "matches": [
+        {
+          "rank": 1,
+          "cosine_similarity": 0.829085,
+          "chunk_id": "6450-006",
+          "topic_id": "6450",
+          "title": "How to Prevent High Blood Pressure",
+          "url": "https://medlineplus.gov/howtopreventhighbloodpressure.html",
+          "text": "- Not smoking. Cigarette smoking raises your blood pressure and puts you at higher risk for heart attack and stroke. If you do not smoke, don't start. If you do smoke, talk to yourprovider for help in finding the best way for you to quit.\n- Managing stress. Learning how to relax and manage stress can improve your emotional and physical health and lower high blood pressure. Stress management techniques include exercising, listening to music, focusing on something calm or peaceful, and meditating.\n- Getting enough high-quality sleep.\nIf you already have high blood pressure, it is important to prevent it from getting worse or causing complications. You need to get regular medical care and follow your treatment plan. Your plan will include healthy lifestyle habit recommendations and possibly medicines.\nNIH: National Heart, Lung, and Blood Institute"
+        },
+        {
+          "rank": 2,
+          "cosine_similarity": 0.816795,
+          "chunk_id": "6450-005",
+          "topic_id": "6450",
+          "title": "How to Prevent High Blood Pressure",
+          "url": "https://medlineplus.gov/howtopreventhighbloodpressure.html",
+          "text": "- Eating a healthy diet. To help manage your blood pressure, you should limit the amount of sodium (salt) that you eat and increase the amount of potassium in your diet. It is also important to eat foods that are lower in fat, as well as plenty of fruits, vegetables, and whole grains. The DASH eating plan is an example of an eating plan that can help you to lower your blood pressure.\n- Getting regular physical activity. Regular physical activity can help you maintain a healthy weight and lower your blood pressure.\n- Being at a healthy weight. Being overweight or having obesity increases your risk for high blood pressure. Maintaining a healthy weight can help you control high blood pressure and reduce your risk for other health problems.\n- Limiting alcohol. Drinking too much alcohol can raise your blood pressure. It also adds extra calories, which may cause weight gain."
+        },
+        {
+          "rank": 3,
+          "cosine_similarity": 0.8166,
+          "chunk_id": "6450-004",
+          "topic_id": "6450",
+          "title": "How to Prevent High Blood Pressure",
+          "url": "https://medlineplus.gov/howtopreventhighbloodpressure.html",
+          "text": "- Research shows that factors such as income, education level, where you live, and the type of job you have may raise your risk of high blood pressure. For example, working early or late shifts can raise your risk.\n- Experiencing discrimination and poverty has been linked to high blood pressure. Also, some research has shown that trauma in childhood may raise the risk of high blood pressure.\n- Certain medicines. Some medicines can raise your blood pressure, including:\n- Certain antidepressants\n- Decongestants (medicines to relieve a stuffy nose)\n- Hormonal birth control pills\n- Non-steroidal anti-inflammatory drugs (NSAIDs), which are a type of pain reliever\n- Having certain other medical conditions, such as:\n- Some tumors\n- Chronic kidney disease\n- Diabetes\n- Metabolic syndrome\n- Overweight and obesity\n- Sleep apnea\n- Thyroid problems\nHow can I prevent high blood pressure?\nYou can help prevent high blood pressure by having a healthy lifestyle. This means:"
+        },
+        {
+          "rank": 4,
+          "cosine_similarity": 0.788479,
+          "chunk_id": "1598-003",
+          "topic_id": "1598",
+          "title": "How to Prevent Heart Disease",
+          "url": "https://medlineplus.gov/howtopreventheartdisease.html",
+          "text": "You may have a lot of changes to make. If you need to, you can make the changes gradually, one at a time. What's most important is that you make them. Depending on your lifestyle, these changes could include:\n- Controlling your blood pressure. High blood pressure is a major risk factor for heart disease. It is important to get your blood pressure checked regularly - at least once a year for most adults, and more often if you have high blood pressure. You can also take steps, including lifestyle changes, to prevent or control high blood pressure.\n- Keeping your cholesterol and triglyceride levels under control:\n- High levels of cholesterol can clog your arteries and raise your risk of coronary artery disease and heart attack. Lifestyle changes and medicines (if needed) can lower your cholesterol.\n- Triglycerides are another type of fat in the blood. High levels of triglyceride may also raise the risk of coronary artery disease, especially in women."
+        },
+        {
+          "rank": 5,
+          "cosine_similarity": 0.7833,
+          "chunk_id": "34-003",
+          "topic_id": "34",
+          "title": "High Blood Pressure",
+          "url": "https://medlineplus.gov/highbloodpressure.html",
+          "text": "When your blood pressure stays high over time, it causes the heart to pump harder and work overtime, possibly leading to serious health problems such as heart attack, stroke, heart failure, and kidney failure.\nWhat are the treatments for high blood pressure?\nTreatments for high blood pressure include heart-healthy lifestyle changes and medicines.\nYou will work with your provider to come up with a treatment plan. It may include only the lifestyle changes. These changes, such as heart-healthy eating and exercise, can be very effective. But sometimes the changes do not control or lower your high blood pressure. Then you may need to take medicine. There are different types of blood pressure medicines. Some people need to take more than one type.\nIf your high blood pressure is caused by another medical condition or medicine, treating that condition or stopping the medicine may lower your blood pressure.\nNIH: National Heart, Lung, and Blood Institute"
+        }
+      ]
+    },
+    {
+      "question": "What can cause ringing in the ears?",
+      "matches": [
+        {
+          "rank": 1,
+          "cosine_similarity": 0.846723,
+          "chunk_id": "1236-001",
+          "topic_id": "1236",
+          "title": "Tinnitus",
+          "url": "https://medlineplus.gov/tinnitus.html",
+          "text": "Tinnitus is often described as a ringing in the ears. It also can sound like roaring, clicking, hissing, or buzzing. It may be soft or loud, high pitched or low pitched. You might hear it in either one or both ears.\nMillions of Americans have tinnitus. People with severe tinnitus may have trouble hearing, working or even sleeping.\nCauses of tinnitus include:\n- Hearing loss in older people\n- Exposure to loud noises\n- Ear and sinus infections\n- Heart or blood vessel problems\n- Meniere's disease\n- Brain tumors\n- Hormonal changes in women\n- Thyroid problems\n- Certain medicines\nTreatment depends on the cause. Treatments may include hearing aids, sound-masking devices, medicines, and ways to learn how to cope with the noise.\nNIH: National Institute on Deafness and Other Communication Disorders"
+        },
+        {
+          "rank": 2,
+          "cosine_similarity": 0.742289,
+          "chunk_id": "1545-002",
+          "topic_id": "1545",
+          "title": "Ear Disorders",
+          "url": "https://medlineplus.gov/eardisorders.html",
+          "text": "- Ear barotrauma, an ear injury from sudden air or water pressure changes\nSome of these conditions can also lead to hearing disorders and deafness.\nWhat causes ear disorders?\nEar disorders may be caused by:\n- Abnormal ear shapes you're born with, like microtia and anotia, which usually have no known cause. Sometimes they're linked to genes or certain medicines taken during pregnancy.\n- Injury from hits, cuts, or bites can damage the ear.\n- Growths that form after an injury, piercing, repeated cold water exposure, or years in the sun.\n- Infections, like perichondritis, which often start from a cut or piercing.\n- Bone growth in the middle ear, called otosclerosis, which can run in families.\nWhat are the symptoms of ear disorders?\nSometimes the only sign of an ear disorder is how your ear looks. Other symptoms may include:\n- Changes in the size or shape of your ear\n- Swelling, redness, or growths\n- Pain or tenderness\n- Scarring or changes in skin color\n- Cuts or holes in the ear or eardrum"
+        },
+        {
+          "rank": 3,
+          "cosine_similarity": 0.741972,
+          "chunk_id": "1674-001",
+          "topic_id": "1674",
+          "title": "Meniere's Disease",
+          "url": "https://medlineplus.gov/menieresdisease.html",
+          "text": "Meniere's disease is a disorder of the inner ear. It can cause severe dizziness, a roaring sound in your ears called tinnitus, hearing loss that comes and goes and the feeling of ear pressure or pain. It usually affects just one ear. It is a common cause of hearing loss.\nAttacks of dizziness may come on suddenly or after a short period of tinnitus or muffled hearing. Some people have single attacks of dizziness once in a while. Others may have many attacks close together over several days. Some people with Meniere's disease have \"drop attacks\" during which the dizziness is so bad they lose their balance and fall.\nScientists don't yet know the cause. They think that it has to do with the fluid levels or the mixing of fluids in the canals of your inner ear. Doctors diagnose it based on a physical exam and your symptoms. A hearing test can check to see how it has affected your hearing."
+        },
+        {
+          "rank": 4,
+          "cosine_similarity": 0.717634,
+          "chunk_id": "1545-001",
+          "topic_id": "1545",
+          "title": "Ear Disorders",
+          "url": "https://medlineplus.gov/eardisorders.html",
+          "text": "What is an ear disorder?\nAn ear disorder is any condition that changes or harms the shape or structure of your ear. This can include abnormal ear shapes you're born with, injuries that change your ear's shape, and a growth on or in the ear.\nYour ear has three main parts, and each one plays a different role in helping you hear:\n- Outer ear. The part you see and the ear canal. It catches sound and sends them to your eardrum.\n- Middle ear. When sound reaches your eardrum, it vibrates. These vibrations move through three small bones, called ossicles, that carry them further into your ear.\n- Inner ear. Changes vibrations into nerve signals your brain understands as sound. It also helps you keep your balance.\nMany conditions may affect your hearing or balance:\n- Ear infections, the most common illness in infants and young children\n- Tinnitus, a ringing or roaring in your ears\n- Meniere's disease, which may be caused by fluid problems in your inner ear"
+        },
+        {
+          "rank": 5,
+          "cosine_similarity": 0.713693,
+          "chunk_id": "204-001",
+          "topic_id": "204",
+          "title": "Hearing Disorders and Deafness",
+          "url": "https://medlineplus.gov/hearingdisordersanddeafness.html",
+          "text": "It's frustrating to be unable to hear well enough to enjoy talking with friends or family. Hearing disorders make it hard, but not impossible, to hear. They can often be helped. Deafness can keep you from hearing sound at all.\nWhat causes hearing loss? Some possibilities are:\n- Heredity\n- Diseases such as ear infections and meningitis\n- Trauma\n- Certain medicines\n- Long-term exposure to loud noise\n- Aging\nThere are two main types of hearing loss. One happens when your inner ear or auditory nerve is damaged. This type is usually permanent. The other kind happens when sound waves cannot reach your inner ear. Earwax buildup, fluid, or a punctured eardrum can cause it. Treatment or surgery can often reverse this kind of hearing loss.\nUntreated, hearing problems can get worse. If you have trouble hearing, you can get help. Possible treatments include hearing aids, cochlear implants, special training, certain medicines, and surgery.\nNIH: National Institute on Deafness and Other Communication Disorders"
+        }
+      ]
+    },
+    {
+      "question": "How does hepatitis C spread?",
+      "matches": [
+        {
+          "rank": 1,
+          "cosine_similarity": 0.809454,
+          "chunk_id": "109-002",
+          "topic_id": "109",
+          "title": "Hepatitis",
+          "url": "https://medlineplus.gov/hepatitis.html",
+          "text": "Hepatitis A and hepatitis E usually spread through contact with food or water that was contaminated with an infected person's stool. You can also get hepatitis E by eating undercooked pork, deer, or shellfish.\nHepatitis B, hepatitis C, and hepatitis D spread through contact with the blood of someone who has the disease. Hepatitis B and D may also spread through contact with other body fluids. This can happen in many ways, such as sharing drug needles or having unprotected sex.\nWho is at risk for hepatitis?\nThe risks are different for the different types of hepatitis. For example, with most of the viral types, your risk is higher if you have unprotected sex. People who drink a lot over long periods of time are at risk for alcoholic hepatitis.\nWhat are the symptoms of hepatitis?\nSome people with hepatitis do not have symptoms and do not know they are infected. If you do have symptoms, they may include:\n- Fever\n- Fatigue\n- Loss of appetite\n- Nausea and/or vomiting\n- Abdominal pain\n- Dark urine"
+        },
+        {
+          "rank": 2,
+          "cosine_similarity": 0.747584,
+          "chunk_id": "1687-001",
+          "topic_id": "1687",
+          "title": "Hepatitis B",
+          "url": "https://medlineplus.gov/hepatitisb.html",
+          "text": "What is hepatitis?\nHepatitis is inflammation of the liver. Inflammation is swelling that happens when tissues of the body are injured or infected. It can damage your liver. This swelling and damage can affect how well your liver functions.\nWhat is hepatitis B?\nHepatitis B is a type of viral hepatitis. It can cause an acute (short-term) or chronic (long-term) infection. People with an acute infection usually get better on their own without treatment. Some people with chronic hepatitis B will need treatment.\nThanks to a vaccine, hepatitis B is not very common in the United States. It is more common in certain parts of the world, such as sub-Saharan Africa and parts of Asia.\nWhat causes hepatitis B?\nHepatitis B is caused by the hepatitis B virus. The virus spreads through contact with blood, semen, or other body fluids from a person who has the virus.\nWho is at risk for hepatitis B?\nAnyone can get hepatitis B, but the risk is higher in:\n- Infants born to mothers who have hepatitis B"
+        },
+        {
+          "rank": 3,
+          "cosine_similarity": 0.742086,
+          "chunk_id": "109-001",
+          "topic_id": "109",
+          "title": "Hepatitis",
+          "url": "https://medlineplus.gov/hepatitis.html",
+          "text": "What is hepatitis?\nHepatitis is inflammation of the liver. Inflammation is swelling that happens when tissues of the body are injured or infected. It can damage your liver. This swelling and damage can affect how well your liver functions.\nHepatitis can be an acute (short-term) infection or a chronic (long-term) infection. Some types of hepatitis cause only acute infections. Other types can cause both acute and chronic infections.\nWhat causes hepatitis?\nThere are different types of hepatitis, with different causes:\n- Viral hepatitis is the most common type. It is caused by one of several viruses -- hepatitis viruses A, B, C, D, and E. In the United States, A, B, and C are the most common.\n- Alcoholic hepatitis is caused by heavy alcohol use\n- Toxic hepatitis can be caused by certain poisons, chemicals, medicines, or supplements\n- Autoimmune hepatitis is a chronic type in which your body's immune system attacks your liver. The cause is not known, but genetics and your environment may play a role.\nHow is viral hepatitis spread?"
+        },
+        {
+          "rank": 4,
+          "cosine_similarity": 0.737183,
+          "chunk_id": "454-001",
+          "topic_id": "454",
+          "title": "Viral Infections",
+          "url": "https://medlineplus.gov/viralinfections.html",
+          "text": "What are viruses?\nViruses are very tiny germs. They are made of genetic material (either DNA or RNA) inside of a protein coating. There are a huge number of viruses on earth. Only a small number of them can infect humans. Those viruses can infect our cells, which may cause disease. Some of the diseases that viruses can cause include the common cold, the flu, COVID-19, and HIV.\nHow are viruses spread?\nViruses can be spread in different ways:\n- Through droplets and particles that are breathed out by someone who has the infection. You might breathe in the droplets or particles, or they could land on your mouth, nose, or eyes.\n- By touching surfaces or objects that have the virus on them and then touching your mouth, nose, or eyes.\n- From the pregnant parent to the baby during pregnancy.\n- Through contaminated food or water.\n- By being bitten by an infected insect or animal.\n- Through sexual contact (usually vaginal, anal and oral sex) with someone who has the infection.\nHow do viruses cause disease?"
+        },
+        {
+          "rank": 5,
+          "cosine_similarity": 0.730526,
+          "chunk_id": "3229-002",
+          "topic_id": "3229",
+          "title": "Mpox",
+          "url": "https://medlineplus.gov/mpox.html",
+          "text": "How does mpox spread?\nMpox spreads in different ways:\n- Through close, personal contact with someone who has the virus:\n- Through direct contact with their rash, scabs, or body fluids\n- By breathing in the virus during prolonged, face-to-face contact\n- During intimate physical contact such as kissing, cuddling, hugging, massage or sex\n- During pregnancy, from the mother to the fetus.\n- From touching items (such as clothes, bedding, or towels) that were used by someone who has the virus\n- From infected animals:\n- By being scratched or bitten by the animal\n- By preparing or eating meat or using products from the animal\nSomeone who has mpox can spread it from the time their symptoms start until their rash has fully healed, all scabs have fallen off, and a fresh layer of skin has formed. This usually takes 2-4 weeks.\nResearchers have found that some people can spread mpox to others from 1 to 4 days before their symptoms appear. It is not known how often this happens.\nWhat are the symptoms of mpox?"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "input_file": "medlineplus_topics_en.json",
+  "input_sha256": "d3222d486966ba3da47c453551e3f163542ab87d4063c0d17d275ea44582c208",
+  "max_words_per_chunk": 180,
+  "overlap_words": 0,
+  "input_topics": 1017,
+  "topics_with_chunks": 1016,
+  "skipped_topics": [
+    {
+      "topic_id": "1286",
+      "title": "Hepatitis C",
+      "url": "https://medlineplus.gov/hepatitisc.html"
+    }
+  ],
+  "chunk_count": 2546,
+  "words_per_chunk": {
+    "min": 4,
+    "mean": 141.8,
+    "max": 180
+  },
+  "chunks_per_topic": {
+    "1": 455,
+    "2": 182,
+    "3": 97,
+    "4": 99,
+    "5": 91,
+    "6": 62,
+    "7": 28,
+    "8": 1,
+    "9": 1
+  },
+  "source_text_preserved_ignoring_whitespace": true,
+  "unique_chunk_ids": true
+}

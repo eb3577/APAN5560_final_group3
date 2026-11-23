@@ -1,0 +1,53 @@
+{
+  "input_file": "mplus_topics_2026-10-28.xml",
+  "input_sha256": "7f996a4a1b95c67628d11214f66361103e76f6edcc44f7f1042eaa48485fa19d",
+  "source": "https://medlineplus.gov/xml.html",
+  "xml_date_generated": "10/28/2026 02:30:36",
+  "xml_declared_topics": 2033,
+  "xml_topics": 2033,
+  "languages": {
+    "English": 1017,
+    "Spanish": 1016
+  },
+  "exported_topics": 1017,
+  "excluded_topics": 1016,
+  "missing_by_field": {
+    "id": 0,
+    "title": 0,
+    "url": 0,
+    "language": 0,
+    "summary": 1,
+    "meta_description": 1,
+    "date_created": 0,
+    "also_called": 511,
+    "see_references": 268,
+    "groups": 0,
+    "related_topics": 179,
+    "mesh_headings": 2,
+    "primary_institutes": 209,
+    "source": 0
+  },
+  "missing_summary_topics": [
+    {
+      "id": "1286",
+      "title": "Hepatitis C",
+      "url": "https://medlineplus.gov/hepatitisc.html"
+    }
+  ],
+  "duplicate_topic_ids_by_field": {
+    "id": [],
+    "title": [],
+    "url": [],
+    "summary": []
+  },
+  "invalid_topic_url_ids": [],
+  "residual_html_topic_ids": [],
+  "topic_url_validation": "Local URL format and uniqueness checks.",
+  "checks": {
+    "xml_count_matches": true,
+    "required_fields_present": true,
+    "unique_ids_and_urls": true,
+    "canonical_topic_urls": true,
+    "no_summary_html_tags": true
+  }
+}
