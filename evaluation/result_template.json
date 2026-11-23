@@ -1,0 +1,25 @@
+{
+  "template_only": true,
+  "question_id": null,
+  "level": null,
+  "retrieved_chunk_ids": [],
+  "selected_chunk_ids": [],
+  "baseline_answer": null,
+  "improved_answer": null,
+  "baseline_scores": null,
+  "improved_scores": null,
+  "target_met": null,
+  "revision_attempts": null,
+  "stop_reason": null,
+  "latency_seconds": {"baseline": null, "improved": null},
+  "reviewer_ratings": [],
+  "run_metadata": {
+    "generation_model": null,
+    "embedding_model": null,
+    "reranker_model": null,
+    "data_version": null,
+    "generation_settings": {},
+    "readability_targets": {},
+    "metric_versions": {}
+  }
+}

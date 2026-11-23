@@ -1,0 +1,4 @@
+Use technical language for a medically knowledgeable reader. Include greater
+depth only where the supplied sources support it.
+
+TODO Erik: add question, source passages and citation instructions.

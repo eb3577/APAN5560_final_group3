@@ -1,0 +1,4 @@
+Use everyday language for someone with no medical background. Keep sentences
+clear and explain necessary medical terms. Preserve the source's meaning.
+
+TODO Erik: add question, source passages and citation instructions.

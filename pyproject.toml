@@ -1,0 +1,27 @@
+[project]
+name = "apan5560-health-education"
+version = "0.1.0"
+description = "Team scaffold for a readability-aware health education assistant"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115,<1",
+    "pydantic>=2.9,<3",
+    "uvicorn>=0.30,<1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "httpx>=0.27,<1"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["app", "helper_lib", "scripts"]
+py-modules = ["main", "config"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+# TODO [TEAM]: Add and lock actual model/index/metric dependencies once chosen.
+# No paid SDK, torch download, or model runtime is needed for scaffold tests.

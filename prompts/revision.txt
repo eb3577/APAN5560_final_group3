@@ -1,0 +1,4 @@
+Rewrite the answer for the selected level using the readability feedback.
+Preserve supported facts, qualifications and citations.
+
+TODO Cole / Alessio: add draft, level, sources and feedback placeholders.

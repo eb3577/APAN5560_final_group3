@@ -1,0 +1,4 @@
+Give a moderately detailed explanation for a general reader. Explain medical
+terminology when used and preserve the source's meaning.
+
+TODO Erik: add question, source passages and citation instructions.

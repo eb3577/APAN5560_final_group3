@@ -1,0 +1,7 @@
+{
+  "chunk_id": "fixture-only-001",
+  "topic_id": "fixture-topic",
+  "title": "Synthetic interface fixture — not medical evidence",
+  "text": "This text tests the passage schema. Do not index it or use it as a health source.",
+  "source_url": "https://example.org/fixture"
+}
