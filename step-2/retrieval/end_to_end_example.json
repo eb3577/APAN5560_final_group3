@@ -1,0 +1,12 @@
+{
+  "status": "answered",
+  "answer": "Chest tightness, coughing, shortness of breath, wheezing [S1]",
+  "sources": [
+    {
+      "label": "S1",
+      "chunk_id": "2-003",
+      "title": "Asthma",
+      "url": "https://medlineplus.gov/asthma.html"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "exact_top_five_match": true,
+  "questions": [
+    {
+      "question": "What are common symptoms of asthma?",
+      "chunk_ids": [
+        "2-003",
+        "1507-003",
+        "1507-004",
+        "2-001",
+        "1507-001"
+      ]
+    },
+    {
+      "question": "What is the difference between type 1 and type 2 diabetes?",
+      "chunk_ids": [
+        "5930-001",
+        "5930-002",
+        "4-002",
+        "6661-001",
+        "1339-001"
+      ]
+    },
+    {
+      "question": "How can I reduce my risk of high blood pressure?",
+      "chunk_ids": [
+        "6450-006",
+        "6450-005",
+        "6450-004",
+        "1598-003",
+        "34-003"
+      ]
+    },
+    {
+      "question": "What can cause ringing in the ears?",
+      "chunk_ids": [
+        "1236-001",
+        "1545-002",
+        "1674-001",
+        "1545-001",
+        "204-001"
+      ]
+    },
+    {
+      "question": "How does hepatitis C spread?",
+      "chunk_ids": [
+        "109-002",
+        "1687-001",
+        "109-001",
+        "454-001",
+        "3229-002"
+      ]
+    }
+  ]
+}

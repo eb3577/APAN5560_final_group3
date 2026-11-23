@@ -60,13 +60,10 @@ The project is for education, not diagnosis or individualized treatment advice.
 
 ## Data and configuration
 
-Peiqi's data preparation and passage embeddings are already done; integrate
-those files rather than redo them. See [data/README.md](data/README.md) for locations.
-Query embeddings must match the existing `BAAI/bge-small-en-v1.5` setup.
-
-Generation model, reranker, vector backend and reading-level thresholds still
-need team decisions. Configuration lives in `config.py`; optional environment
-settings are listed in `.env.example`. To load a local `.env` in your terminal:
+See [Step 1](step-1/README.md) for MedlinePlus preparation and [Step 2](step-2/README.md)
+for running the local RAG pipeline. Shared artifact locations are documented in
+[data/README.md](data/README.md). Model overrides and other settings are in
+`config.py` and `.env.example`. To load a local `.env` in your terminal:
 
 ```bash
 set -a
@@ -86,9 +83,9 @@ python -m scripts.build_index
 python -m scripts.run_evaluation
 ```
 
-Tests currently cover the API shell. Scripts call the corresponding helper
-functions and will report missing implementations until those are filled in.
-`scripts.prepare_data` is available for reproducing Peiqi's existing preparation.
+Tests currently cover the API shell. [Step 1](step-1/README.md) documents how
+to regenerate the cleaned topics and passages. [Step 2](step-2/README.md)
+documents local retrieval and generation. The evaluation script is a placeholder.
 
 ## Docker
 

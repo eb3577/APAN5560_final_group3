@@ -14,11 +14,15 @@ QUERY_PREFIX = "Represent this sentence for searching relevant passages: "
 
 
 def search(project, questions, top_k, data_dir=None):
-    embedding_dir = data_dir if data_dir is not None else project / "Embedding"
+    desktop_layout = (project / "Step Two").is_dir()
+    embedding_dir = data_dir if data_dir is not None else project / (
+        "Step Two" if desktop_layout else "Embedding"
+    )
     report = json.loads((embedding_dir / "embedding_report.json").read_bytes())
     manifest = json.loads((embedding_dir / "embedding_manifest.json").read_bytes())
     vectors = np.load(embedding_dir / "medlineplus_embeddings.npy", allow_pickle=False)
-    chunk_file = project / "phase1/chunking/medlineplus_chunks_en.json"
+    phase_one = "Step One" if desktop_layout else "phase1"
+    chunk_file = project / phase_one / "chunking/medlineplus_chunks_en.json"
     if data_dir is not None:
         chunk_file = data_dir / chunk_file.name
     payload = chunk_file.read_bytes()
