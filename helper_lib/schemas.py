@@ -64,12 +64,17 @@ class ExplainRequest(Contract):
     model_config = ConfigDict(extra="forbid", str_strip_whitespace=True)
     question: str = Field(min_length=1, max_length=2000)
     level: ExplanationLevel = ExplanationLevel.STANDARD
-    mode: PipelineMode = PipelineMode.IMPROVED
+    mode: PipelineMode = PipelineMode.BASELINE
+    rerank: bool = False
+
+
+class CitedSource(Passage):
+    label: str
 
 
 class ExplainResponse(Contract):
     answer: AnswerDraft
-    sources: list[Passage]
+    sources: list[CitedSource]
     level: ExplanationLevel
     mode: PipelineMode
     status: Literal["answered", "insufficient_sources", "out_of_scope"]

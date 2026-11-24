@@ -5,14 +5,32 @@ import json
 
 from config import RETRIEVE_TOP_K
 from helper_lib.model import generate_text
+from helper_lib.generator import generate_explanation
+from helper_lib.schemas import ExplanationLevel
 from helper_lib.reranker import rerank_passages
 from helper_lib.retrieval import retrieve_passages
 
 
-def answer(question: str, use_reranker: bool = False) -> dict:
+def answer(question: str, use_reranker: bool = False,
+           level: str | None = None) -> dict:
     hits = retrieve_passages(question, RETRIEVE_TOP_K if use_reranker else 1)
     if use_reranker:
         hits = rerank_passages(question, hits, 1)
+    if not hits:
+        return {"status": "insufficient_sources", "answer": "", "sources": []}
+    if level is not None:
+        draft = generate_explanation(question, ExplanationLevel(level), hits)
+        if not draft.text:
+            return {"status": "insufficient_sources", "answer": "", "sources": []}
+        return {
+            "status": "answered", "answer": draft.text, "level": level,
+            "sources": [
+                {"label": f"S{i}", "chunk_id": hit.passage.chunk_id,
+                 "title": hit.passage.title, "url": str(hit.passage.source_url)}
+                for i, hit in enumerate(hits, start=1)
+                if hit.passage.chunk_id in draft.cited_chunk_ids
+            ],
+        }
     passage = hits[0].passage
     text = generate_text(
         f"Passage from MedlinePlus ({passage.title}):\n{passage.text}\n\n"
@@ -39,5 +57,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("question")
     parser.add_argument("--rerank", action="store_true")
+    parser.add_argument("--level", choices=[level.value for level in ExplanationLevel],
+                        help="Use a level-specific explanation; omit for the original Step 2 answer.")
     args = parser.parse_args()
-    print(json.dumps(answer(args.question, args.rerank), indent=2, ensure_ascii=False))
+    print(json.dumps(answer(args.question, args.rerank, args.level), indent=2, ensure_ascii=False))

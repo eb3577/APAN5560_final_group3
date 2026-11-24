@@ -1,7 +1,7 @@
 """OWNER: Erik. Run with: uvicorn main:app --reload --port 8000."""
 from fastapi import FastAPI, HTTPException
 from app.health_assistant import explain
-from helper_lib.errors import ComponentNotImplemented, ResourceUnavailable
+from helper_lib.errors import ComponentNotImplemented, ResourceUnavailable, InvalidGeneratedAnswer
 from helper_lib.schemas import ExplainRequest, ExplainResponse
 
 app = FastAPI(
@@ -13,12 +13,15 @@ app = FastAPI(
 
 @app.get("/health")
 def health():
-    return {"status": "ok", "stage": "scaffold", "pipeline_ready": False}
+    return {"status": "ok", "stage": "integration", "pipeline_ready": False,
+            "note": "Server is running; model quality is still under review."}
 
 
 @app.post("/explain", response_model=ExplainResponse,
           responses={501: {"description": "Component not implemented"},
-                     503: {"description": "Required resource unavailable"}})
+                     503: {"description": "Required resource unavailable"},
+                     502: {"description": "Generated answer has invalid citations"},
+                     422: {"description": "Invalid request"}})
 def explain_health(request: ExplainRequest):
     try:
         return explain(request)
@@ -27,4 +30,8 @@ def explain_health(request: ExplainRequest):
     except ResourceUnavailable as exc:
         raise HTTPException(status_code=503, detail=str(exc)) from exc
 
-# TODO Erik: check actual pipeline readiness after integration.
+    except InvalidGeneratedAnswer as exc:
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+    except ValueError as exc:
+        raise HTTPException(status_code=422, detail="Request could not be processed; "
+                            "try a shorter question. If it persists, check server data validation.") from exc

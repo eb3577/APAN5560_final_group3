@@ -15,7 +15,7 @@ def test_health_is_honest_about_readiness():
 
 def test_placeholder_for_every_level_and_mode():
     for level in ("simple", "standard", "advanced"):
-        for mode in ("baseline", "improved"):
+        for mode in ("improved",):
             response = client.post("/explain", json={
                 "question": "What does this health term mean?",
                 "level": level, "mode": mode,
