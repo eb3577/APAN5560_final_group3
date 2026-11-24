@@ -1,0 +1,21 @@
+{
+  "model": "BAAI/bge-small-en-v1.5",
+  "model_revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+  "input_file": "medlineplus_chunks_en.json",
+  "input_sha256": "cfa2f9270b717c50b5c4fbaf3229dbe8a717813a1cbec1e9d442be90b45fc7ec",
+  "input_format": "title + newline + passage text",
+  "input_chunks": 2546,
+  "vector_shape": [
+    2546,
+    384
+  ],
+  "dtype": "float32",
+  "pooling": "CLS",
+  "normalization": "L2",
+  "model_token_limit": 512,
+  "max_input_tokens": 305,
+  "truncated_passages": 0,
+  "all_vectors_finite": true,
+  "all_vectors_unit_length": true,
+  "unique_chunk_ids": true
+}
