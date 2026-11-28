@@ -1,4 +1,18 @@
 Rewrite the answer for the selected level using the readability feedback.
-Preserve supported facts, qualifications and citations.
+Preserve all supported facts, medical qualifications, and inline source citations ([S1], [S2], etc.).
+Do not add unsupported claims or cite any source label not listed below.
+Return only the revised explanation text with no preamble or notes.
 
-TODO Cole / Alessio: add draft, level, sources and feedback placeholders.
+Target reading level: {level} ({grade_target})
+
+Question:
+{question}
+
+Readability feedback to address:
+{feedback}
+
+Current draft:
+{draft}
+
+Allowed sources:
+{context}

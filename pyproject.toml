@@ -6,6 +6,7 @@ requires-python = ">=3.11"
 dependencies = [
     "fastapi>=0.115,<1",
     "pydantic>=2.9,<3",
+    "textstat>=0.7.13",
     "uvicorn>=0.30,<1",
 ]
 
@@ -23,6 +24,12 @@ py-modules = ["main", "config"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[dependency-groups]
+dev = [
+    "httpx2>=2.16.2",
+    "pytest>=9.2.0",
+]
 
 # TODO [TEAM]: Add and lock actual model/index/metric dependencies once chosen.
 # No paid SDK, torch download, or model runtime is needed for scaffold tests.
