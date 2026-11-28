@@ -22,6 +22,10 @@ from .schemas import (
 
 CITATION_PATTERN = re.compile(r"\[S([^\[\]]*)\]")
 
+# Reject revisions that "pass" by collapsing into a few short sentences.
+MIN_REVISION_SENTENCES = 3
+MIN_LENGTH_RATIO = 0.5  # of the original draft's word count; tune after live runs
+
 
 def _grade_distance(level: ExplanationLevel, scores: ReadabilityScores) -> float:
     """Distance outside the target composite grade window (0.0 if inside)."""
@@ -156,6 +160,7 @@ def revise_explanation(
     best_scores = initial_scores
     best_assessment = initial_assessment
     best_rank = _score_rank(resolved_level, initial_scores, initial_assessment)
+    min_sentences = min(MIN_REVISION_SENTENCES, initial_scores.sentence_count)
 
     current_answer = answer
     feedback = list(initial_assessment.reasons)
@@ -179,6 +184,18 @@ def revise_explanation(
             continue
 
         candidate_scores = score_readability(candidate.text)
+
+        if (
+            candidate_scores.sentence_count < min_sentences
+            or candidate_scores.word_count < MIN_LENGTH_RATIO * initial_scores.word_count
+        ):
+            feedback = list(best_assessment.reasons) + [
+                "Revision was too short and likely dropped supported facts; "
+                f"keep at least {min_sentences} sentences and cover the same supported points."
+            ]
+            current_answer = best_answer
+            continue
+
         candidate_assessment = assess_level(candidate.text, resolved_level, candidate_scores)
 
         if candidate_assessment.meets_target is True:
