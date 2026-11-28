@@ -75,12 +75,17 @@ def test_composite_grade_combinations():
     fk_only = ReadabilityScores(
         flesch_kincaid_grade=7.2, smog_grade=None, word_count=15, sentence_count=2
     )
+    smog_only = ReadabilityScores(
+        flesch_kincaid_grade=None, smog_grade=8.0, word_count=40, sentence_count=4
+    )
     neither = ReadabilityScores(
         flesch_kincaid_grade=None, smog_grade=None, word_count=2, sentence_count=1
     )
 
-    assert composite_grade(both) == 7.0
+    # Target decisions use Flesch-Kincaid only, so SMOG never changes the grade.
+    assert composite_grade(both) == 6.0
     assert composite_grade(fk_only) == 7.2
+    assert composite_grade(smog_only) is None
     assert composite_grade(neither) is None
 
 
