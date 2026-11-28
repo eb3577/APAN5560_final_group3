@@ -3,10 +3,28 @@ import pytest
 from fastapi.testclient import TestClient
 import main
 from app import health_assistant
-from helper_lib import generator
+from helper_lib import generator, revision
 from helper_lib.schemas import Passage, RetrievedPassage
 
 client = TestClient(main.app)
+
+ADVANCED_CITED = (
+    "Essential hypertension is a chronic cardiovascular condition characterized by "
+    "persistently elevated pressure within the systemic arterial vessels over time [S1]. "
+    "Primary mechanisms include endothelial dysfunction, increased sympathetic nervous "
+    "activity, and impaired renal sodium regulation across multiple organ systems [S1]. "
+    "Without adequate intervention, sustained hemodynamic overload promotes ventricular "
+    "hypertrophy and elevates the long-term risk of stroke or kidney failure [S1]. "
+    "Clinical management combines structured behavioral modification with individualized "
+    "pharmacologic therapy guided by each patient's overall cardiovascular risk [S1]."
+)
+
+SIMPLE_CITED = (
+    "High blood pressure happens when blood pushes too hard on artery walls [S1]. "
+    "Over time, this extra force can harm your heart and kidneys [S1]. "
+    "Most people do not feel sick at first, so regular checks matter [S1]. "
+    "Simple daily habits and safe medicine can help keep your numbers down [S1]."
+)
 
 
 @pytest.fixture
@@ -61,9 +79,29 @@ def test_missing_data_is_503(monkeypatch):
     assert 'private/local/path' not in response.text
 
 
-def test_improved_skips_retrieval(monkeypatch):
-    monkeypatch.setattr(health_assistant, 'retrieve_passages', lambda *args: pytest.fail('Unexpected retrieval'))
-    assert client.post('/explain', json={'question': 'Example?', 'mode': 'improved'}).status_code == 501
+def test_improved_revises_answer(monkeypatch, sources):
+    monkeypatch.setattr(generator, 'generate_text', lambda prompt: ADVANCED_CITED)
+    monkeypatch.setattr(revision, 'generate_text', lambda prompt: SIMPLE_CITED)
+    response = client.post(
+        '/explain',
+        json={'question': 'Example?', 'level': 'simple', 'mode': 'improved'},
+    )
+    assert response.status_code == 200
+    data = response.json()
+    assert data['mode'] == 'improved'
+    assert data['status'] == 'answered'
+    assert data['answer']['text'] == SIMPLE_CITED
+    assert data['sources'][0]['label'] == 'S1'
+    assert data['sources'][0]['chunk_id'] == 'example-1'
+    assert data['initial_readability'] is not None
+    assert data['final_readability'] is not None
+    assert (
+        data['final_readability']['flesch_kincaid_grade']
+        < data['initial_readability']['flesch_kincaid_grade']
+    )
+    assert data['target_met'] is True
+    assert data['revision_attempts'] == 1
+    assert data['stop_reason'] == 'target_met'
 
 
 def test_reranker_is_used(monkeypatch, sources):

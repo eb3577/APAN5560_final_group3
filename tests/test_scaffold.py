@@ -2,7 +2,7 @@
 from fastapi.testclient import TestClient
 import main
 from helper_lib.errors import ResourceUnavailable
-from helper_lib.schemas import Passage
+from helper_lib.schemas import AnswerDraft, ExplainResponse, Passage
 
 client = TestClient(main.app)
 
@@ -13,15 +13,28 @@ def test_health_is_honest_about_readiness():
     assert response.json()["pipeline_ready"] is False
 
 
-def test_placeholder_for_every_level_and_mode():
+def test_every_level_and_mode_is_accepted(monkeypatch):
+    def stub_explain(request):
+        return ExplainResponse(
+            answer=AnswerDraft(text="Example answer."),
+            sources=[],
+            level=request.level,
+            mode=request.mode,
+            status="answered",
+            stop_reason="baseline_complete",
+        )
+
+    monkeypatch.setattr(main, "explain", stub_explain)
     for level in ("simple", "standard", "advanced"):
-        for mode in ("improved",):
+        for mode in ("baseline", "improved"):
             response = client.post("/explain", json={
                 "question": "What does this health term mean?",
                 "level": level, "mode": mode,
             })
-            assert response.status_code == 501
-            assert "not implemented" in response.json()["detail"]
+            assert response.status_code == 200
+            body = response.json()
+            assert body["level"] == level
+            assert body["mode"] == mode
 
 
 def test_invalid_requests_are_rejected():
