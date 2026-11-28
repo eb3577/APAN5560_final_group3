@@ -221,3 +221,30 @@ def test_revise_falls_back_to_original_if_all_revisions_break_citations(monkeypa
     assert result.attempts == 2
     assert result.stop_reason == "max_attempts_reached"
     assert result.answer == draft
+
+
+def test_revise_rejects_collapsed_revision_and_retries(monkeypatch):
+    """A 2-sentence revision with valid citations must not win by shrinking the text."""
+    collapsed = "High blood pressure harms the heart [S1]. Check it often [S1]."
+    prompts_seen: list[str] = []
+
+    def fake_generate(prompt: str) -> str:
+        prompts_seen.append(prompt)
+        return collapsed
+
+    monkeypatch.setattr("helper_lib.revision.generate_text", fake_generate)
+
+    draft = AnswerDraft(text=ADVANCED_CITED, cited_chunk_ids=["chunk-1"])
+    result = revise_explanation(
+        question="What is high blood pressure?",
+        level=ExplanationLevel.SIMPLE,
+        answer=draft,
+        passages=[_make_passage("chunk-1")],
+        max_attempts=2,
+    )
+
+    assert len(prompts_seen) == 2
+    assert "too short" in prompts_seen[1]
+    assert result.attempts == 2
+    assert result.stop_reason == "max_attempts_reached"
+    assert result.answer == draft
