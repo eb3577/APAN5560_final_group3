@@ -7,7 +7,7 @@ import textstat
 
 from .schemas import ExplanationLevel, LevelAssessment, ReadabilityScores
 
-# Target composite grade-level windows: (min_grade, max_grade); None = no upper cap
+# Target Flesch-Kincaid grade windows: (min_grade, max_grade); None = no upper cap.
 LEVEL_TARGETS: dict[ExplanationLevel, tuple[float, float | None]] = {
     ExplanationLevel.SIMPLE: (4.0, 7.5),      # Plain language
     ExplanationLevel.STANDARD: (8.0, 11.5),   # Informed general adult
@@ -41,12 +41,12 @@ def _strip_citations(text: str) -> str:
 
 
 def composite_grade(scores: ReadabilityScores) -> float | None:
-    """Average FKGL and SMOG when both exist; otherwise return whichever is available."""
-    fk = scores.flesch_kincaid_grade
-    smog = scores.smog_grade
-    if fk is not None and smog is not None:
-        return round((fk + smog) / 2.0, 2)
-    return fk if fk is not None else smog
+    """Grade used for target decisions: Flesch-Kincaid only.
+
+    SMOG is still computed and reported, but it is undefined for answers under
+    3 sentences, so using it would change the metric between drafts.
+    """
+    return scores.flesch_kincaid_grade
 
 
 def score_readability(text: str) -> ReadabilityScores:
